@@ -2,7 +2,7 @@ using System;
 
 namespace BovinoRemoto.dominio
 {
-  pubblic class Vaca
+  public class Vaca
   {
     public int Codigo {get;set;}
     public string Nombre {get;set;}

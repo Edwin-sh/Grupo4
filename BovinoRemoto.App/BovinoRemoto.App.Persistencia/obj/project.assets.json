@@ -1763,6 +1763,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "BovinoRemoto.App.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/BovinoRemoto.App.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BovinoRemoto.App.Dominio.dll": {}
+        }
       }
     }
   },
@@ -6031,10 +6041,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "BovinoRemoto.App.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../BovinoRemoto.App.Dominio/BovinoRemoto.App.Dominio.csproj",
+      "msbuildProject": "../BovinoRemoto.App.Dominio/BovinoRemoto.App.Dominio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "BovinoRemoto.App.Dominio >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.0",
@@ -6072,7 +6088,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Dominio\\BovinoRemoto.App.Dominio.csproj": {
+              "projectPath": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Dominio\\BovinoRemoto.App.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

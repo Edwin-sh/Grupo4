@@ -1,0 +1,12 @@
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\bin\Debug\net6.0\BovinoRemoto.App.Dominio.deps.json
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\bin\Debug\net6.0\BovinoRemoto.App.Dominio.dll
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\bin\Debug\net6.0\BovinoRemoto.App.Dominio.pdb
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\BovinoRemoto.App.Dominio.csproj.AssemblyReference.cache
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\BovinoRemoto.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\BovinoRemoto.App.Dominio.AssemblyInfoInputs.cache
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\BovinoRemoto.App.Dominio.AssemblyInfo.cs
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\BovinoRemoto.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\BovinoRemoto.App.Dominio.dll
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\refint\BovinoRemoto.App.Dominio.dll
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\BovinoRemoto.App.Dominio.pdb
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Dominio\obj\Debug\net6.0\ref\BovinoRemoto.App.Dominio.dll

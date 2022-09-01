@@ -1,0 +1,17 @@
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\bin\Debug\net6.0\BovinoRemoto.App.Persistencia.deps.json
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\bin\Debug\net6.0\BovinoRemoto.App.Persistencia.runtimeconfig.json
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\bin\Debug\net6.0\BovinoRemoto.App.Persistencia.dll
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\bin\Debug\net6.0\BovinoRemoto.App.Persistencia.pdb
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\bin\Debug\net6.0\BovinoRemoto.App.Dominio.dll
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\bin\Debug\net6.0\BovinoRemoto.App.Dominio.pdb
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.csproj.AssemblyReference.cache
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.AssemblyInfoInputs.cache
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.AssemblyInfo.cs
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.csproj.CopyComplete
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.dll
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\refint\BovinoRemoto.App.Persistencia.dll
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.pdb
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\BovinoRemoto.App.Persistencia.genruntimeconfig.cache
+C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Persistencia\obj\Debug\net6.0\ref\BovinoRemoto.App.Persistencia.dll
