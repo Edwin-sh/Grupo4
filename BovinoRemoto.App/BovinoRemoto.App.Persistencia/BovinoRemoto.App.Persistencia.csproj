@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BovinoRemoto.App.Dominio\BovinoRemoto.App.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>
