@@ -1,6 +1,6 @@
 using System;
 
-namespace BovinoRemoto.dominio
+namespace BovinoRemoto.App.Dominio
 {
   public class Vaca
   {
