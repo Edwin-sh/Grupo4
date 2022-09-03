@@ -5,9 +5,15 @@ namespace BovinoRemoto.App.Persistencia
 {
     public class AppContext : DbContext
     {
-        public DbSet<Persona> Personas { get; set; }
         public DbSet<Dueño> Dueños { get; set; }
+        public DbSet<HistoriaClinica> HistoriasClinicas { get; set; }
+        //public DbSet<Persona> Personas { get; set; }
+        public DbSet<Recomendacion> Recomendaciones { get; set; }
+        public DbSet<Signo_Vital> SignosVitales { get; set; }
+        public DbSet<Vaca> Vacas { get; set; }
         public DbSet<Veterinario> Veterinarios { get; set; }
+        public DbSet<Visita> Visitas { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

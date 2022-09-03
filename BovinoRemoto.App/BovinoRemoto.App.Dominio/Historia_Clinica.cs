@@ -1,6 +1,6 @@
 namespace BovinoRemoto.App.Dominio
 {
-    public class HistoriaClinica
+    public class Historia_Clinica
     {
         public int Id { get; set; }
         public DateTime FechaCreacion { get; set; }
