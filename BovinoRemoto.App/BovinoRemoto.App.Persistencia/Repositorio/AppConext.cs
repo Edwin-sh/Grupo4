@@ -6,7 +6,7 @@ namespace BovinoRemoto.App.Persistencia
     public class AppContext : DbContext
     {
         public DbSet<Dueño> Dueños { get; set; }
-        public DbSet<HistoriaClinica> HistoriasClinicas { get; set; }
+        public DbSet<Historia_Clinica> HistoriasClinicas { get; set; }
         //public DbSet<Persona> Personas { get; set; }
         public DbSet<Recomendacion> Recomendaciones { get; set; }
         public DbSet<Signo_Vital> SignosVitales { get; set; }
