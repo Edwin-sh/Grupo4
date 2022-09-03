@@ -3,10 +3,27 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace BovinoRemoto.App.Persistencia.Migrations
 {
-    public partial class Inicial : Migration
+    public partial class Update : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Dueños",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Nombres = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Dueños", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "HistoriasClinicas",
                 columns: table => new
@@ -21,22 +38,40 @@ namespace BovinoRemoto.App.Persistencia.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Personas",
+                name: "Veterinarios",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    TarjetaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nombres = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Apellidos = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Direccion = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Discriminator = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Correo = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TarjetaProfesional = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    Telefono = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Personas", x => x.Id);
+                    table.PrimaryKey("PK_Veterinarios", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Visitas",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    EstadoAnimo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Historia_ClinicaId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Visitas", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Visitas_HistoriasClinicas_Historia_ClinicaId",
+                        column: x => x.Historia_ClinicaId,
+                        principalTable: "HistoriasClinicas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -47,29 +82,30 @@ namespace BovinoRemoto.App.Persistencia.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nombre = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Especie = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Raza = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Vacas", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Visitas",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    EstadoAnimo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Raza = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DueñoId = table.Column<int>(type: "int", nullable: true),
+                    VeterinarioId = table.Column<int>(type: "int", nullable: true),
                     HistoriaClinicaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Visitas", x => x.Id);
+                    table.PrimaryKey("PK_Vacas", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Visitas_HistoriasClinicas_HistoriaClinicaId",
+                        name: "FK_Vacas_Dueños_DueñoId",
+                        column: x => x.DueñoId,
+                        principalTable: "Dueños",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Vacas_HistoriasClinicas_HistoriaClinicaId",
                         column: x => x.HistoriaClinicaId,
                         principalTable: "HistoriasClinicas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Vacas_Veterinarios_VeterinarioId",
+                        column: x => x.VeterinarioId,
+                        principalTable: "Veterinarios",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -126,16 +162,28 @@ namespace BovinoRemoto.App.Persistencia.Migrations
                 column: "VisitaId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Visitas_HistoriaClinicaId",
-                table: "Visitas",
+                name: "IX_Vacas_DueñoId",
+                table: "Vacas",
+                column: "DueñoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Vacas_HistoriaClinicaId",
+                table: "Vacas",
                 column: "HistoriaClinicaId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Vacas_VeterinarioId",
+                table: "Vacas",
+                column: "VeterinarioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Visitas_Historia_ClinicaId",
+                table: "Visitas",
+                column: "Historia_ClinicaId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Personas");
-
             migrationBuilder.DropTable(
                 name: "Recomendaciones");
 
@@ -147,6 +195,12 @@ namespace BovinoRemoto.App.Persistencia.Migrations
 
             migrationBuilder.DropTable(
                 name: "Visitas");
+
+            migrationBuilder.DropTable(
+                name: "Dueños");
+
+            migrationBuilder.DropTable(
+                name: "Veterinarios");
 
             migrationBuilder.DropTable(
                 name: "HistoriasClinicas");

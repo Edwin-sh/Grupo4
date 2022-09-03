@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BovinoRemoto.App.Persistencia.Migrations
 {
     [DbContext(typeof(AppContext))]
-    [Migration("20220902163556_Init")]
-    partial class Init
+    [Migration("20220903033012_Update")]
+    partial class Update
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,7 +48,7 @@ namespace BovinoRemoto.App.Persistencia.Migrations
                     b.ToTable("Dueños");
                 });
 
-            modelBuilder.Entity("BovinoRemoto.App.Dominio.HistoriaClinica", b =>
+            modelBuilder.Entity("BovinoRemoto.App.Dominio.Historia_Clinica", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -113,8 +113,14 @@ namespace BovinoRemoto.App.Persistencia.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<int?>("DueñoId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Especie")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("HistoriaClinicaId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
@@ -122,7 +128,16 @@ namespace BovinoRemoto.App.Persistencia.Migrations
                     b.Property<string>("Raza")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("VeterinarioId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("DueñoId");
+
+                    b.HasIndex("HistoriaClinicaId");
+
+                    b.HasIndex("VeterinarioId");
 
                     b.ToTable("Vacas");
                 });
@@ -164,12 +179,12 @@ namespace BovinoRemoto.App.Persistencia.Migrations
                     b.Property<string>("EstadoAnimo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("HistoriaClinicaId")
+                    b.Property<int?>("Historia_ClinicaId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("HistoriaClinicaId");
+                    b.HasIndex("Historia_ClinicaId");
 
                     b.ToTable("Visitas");
                 });
@@ -188,14 +203,35 @@ namespace BovinoRemoto.App.Persistencia.Migrations
                         .HasForeignKey("VisitaId");
                 });
 
-            modelBuilder.Entity("BovinoRemoto.App.Dominio.Visita", b =>
+            modelBuilder.Entity("BovinoRemoto.App.Dominio.Vaca", b =>
                 {
-                    b.HasOne("BovinoRemoto.App.Dominio.HistoriaClinica", null)
-                        .WithMany("Visitas")
+                    b.HasOne("BovinoRemoto.App.Dominio.Dueño", "Dueño")
+                        .WithMany()
+                        .HasForeignKey("DueñoId");
+
+                    b.HasOne("BovinoRemoto.App.Dominio.Historia_Clinica", "HistoriaClinica")
+                        .WithMany()
                         .HasForeignKey("HistoriaClinicaId");
+
+                    b.HasOne("BovinoRemoto.App.Dominio.Veterinario", "Veterinario")
+                        .WithMany()
+                        .HasForeignKey("VeterinarioId");
+
+                    b.Navigation("Dueño");
+
+                    b.Navigation("HistoriaClinica");
+
+                    b.Navigation("Veterinario");
                 });
 
-            modelBuilder.Entity("BovinoRemoto.App.Dominio.HistoriaClinica", b =>
+            modelBuilder.Entity("BovinoRemoto.App.Dominio.Visita", b =>
+                {
+                    b.HasOne("BovinoRemoto.App.Dominio.Historia_Clinica", null)
+                        .WithMany("Visitas")
+                        .HasForeignKey("Historia_ClinicaId");
+                });
+
+            modelBuilder.Entity("BovinoRemoto.App.Dominio.Historia_Clinica", b =>
                 {
                     b.Navigation("Visitas");
                 });
