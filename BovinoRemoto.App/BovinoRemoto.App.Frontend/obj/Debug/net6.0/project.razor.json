@@ -16303,8 +16303,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Registro\\NewBovine.cshtml",
+      "TargetPath": "Pages\\Registro\\NewBovine.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Registro\\NewVeterinary.cshtml",
+      "TargetPath": "Pages\\Registro\\NewVeterinary.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Privacy.cshtml",
       "TargetPath": "Pages\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Registro\\NewOwner.cshtml",
+      "TargetPath": "Pages\\Registro\\NewOwner.cshtml",
       "FileKind": "mvc"
     },
     {
