@@ -1,0 +1,24 @@
+.panel-rol {
+    width: 450px;
+    height: 800px;
+    margin: 20px auto;
+    }
+   
+.titulo-panel {
+    text-align: center;
+    font: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    }
+.icono-menu {
+    margin: 20px;
+    max-width: 400px;
+    max-height: 400px;
+    min-height: 400px;
+    min-width: 400px;
+    }
+       
+.boton-acceso {
+    margin: 10px auto;
+    }
+      
