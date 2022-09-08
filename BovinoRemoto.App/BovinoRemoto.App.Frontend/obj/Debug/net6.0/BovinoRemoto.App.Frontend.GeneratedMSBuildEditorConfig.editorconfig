@@ -15,12 +15,24 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = c:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend
 build_property._RazorSourceGeneratorDebug = 
 
+[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Acceso/LoginOwner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjZXNvXExvZ2luT3duZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Acceso/LoginVeterinary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjZXNvXExvZ2luVmV0ZXJpbmFyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Main/MainVeterinary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblxNYWluVmV0ZXJpbmFyeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Privacy.cshtml]
