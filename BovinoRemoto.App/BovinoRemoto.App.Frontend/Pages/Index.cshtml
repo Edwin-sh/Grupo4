@@ -4,7 +4,40 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
+
+<div style="width: 1000px; border: 3px solid black; margin: 20px auto;">
+    <ul class="nav">
+        <li class="panel-rol">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title titulo-panel">Veterinarios</h5>
+                    <img class="card-img-top icono-menu"
+                        src="https://th.bing.com/th/id/OIP.N4tNoMn8cm7zaNqY9kT8mAHaGy?pid=ImgDet&rs=1"
+                        alt="Imagen Veterinarios">
+                    <div class="nav">
+                        <a class="nav-item btn btn-secondary boton-acceso" asp-area=""
+                            asp-page="/Registro/NewVeterinary">Registrarme</a>
+                        <a class="nav-item btn btn-secondary boton-acceso" asp-area="" asp-page="/Index">Acceder</a>
+                    </div>
+                </div>
+            </div>
+
+        </li>
+        <li class="panel-rol">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title titulo-panel">Dueños</h5>
+                    <img class="card-img-top icono-menu"
+                        src="https://sites.google.com/site/lasprofesionesylosoficios/_/rsrc/1468858237298/home/sector-primario/ganadero.jpg?height=320&width=225"
+                        alt="Imagen Dueños">
+                    <div class="nav">
+                        <a class="nav-item btn btn-secondary boton-acceso" asp-area=""
+                            asp-page="/Registro/NewOwner">Registrarme</a>
+                        <a class="nav-item btn btn-secondary boton-acceso" asp-area="" asp-page="/Index">Acceder</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>
