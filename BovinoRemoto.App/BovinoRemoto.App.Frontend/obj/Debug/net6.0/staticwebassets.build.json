@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F85TvShudq0AET9LaKW/qBfKWB7hPAO/7CSbVEiIJtw=",
+  "Hash": "DD/5F8jkQgEmhfwHZvAYz+QRRo5YVKqx0cjZPesEKJE=",
   "Source": "BovinoRemoto.App.Frontend",
   "BasePath": "_content/BovinoRemoto.App.Frontend",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\Index.css",
+      "SourceId": "BovinoRemoto.App.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\",
+      "BasePath": "_content/BovinoRemoto.App.Frontend",
+      "RelativePath": "Index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Index.css"
     },
     {
       "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\js\\site.js",
