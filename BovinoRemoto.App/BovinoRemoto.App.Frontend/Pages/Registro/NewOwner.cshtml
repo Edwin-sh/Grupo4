@@ -2,28 +2,32 @@
 @model BovinoRemoto.App.Frontend.Pages.Entidades.NewOwnerModel
 @{
 }
+<div class="container text-center bg-dark bg-opacity-25">
+    <p style="font-size: x-large;">Ingresando un nuevo Dueño</p>
+</div>
 <form>
     <div class="form-group">
-        <div class="container text-center bg-dark bg-opacity-25">
-            <p style="font-size: x-large;">Ingresando un nuevo usuario</p>
-        </div>
+
         <label for="Id">Id</label>
-        <input class="form-control"  style="width: 500px;" type="text" id="Id" placeholder="Numero de identificación">
+        <input class="form-control" style="width: 500px;" type="text" id="Id" placeholder="Numero de identificación">
 
         <label for="nombres">Nombres</label>
         <input class="form-control" type="text" id="nombres" placeholder="Nombres">
-        
+
         <label for="apellidos">Apellidos</label>
         <input class="form-control" type="text" id="apellidos" placeholder="Apellidos">
-        
+
         <label for="direccion">Dirección</label>
         <input class="form-control" type="text" id="direccion" placeholder="Dirección">
-                
+
         <label for="telefono">Teléfono</label>
         <input class="form-control" type="text" id="telefono" placeholder="Numero telefónico">
 
         <label for="correo">Email</label>
         <input class="form-control" type="email" id="correo" placeholder="Dirección de correo electrónico">
-          
-    <button type="submit" class="btn btn-primary">Guardar</button>
+        <small id="emailHelp" class="form-text text-muted">No compartirémos su email con terceros</small>
+
+        <p></p>
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
 </form>

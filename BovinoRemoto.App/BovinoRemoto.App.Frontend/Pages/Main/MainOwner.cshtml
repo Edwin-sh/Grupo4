@@ -2,3 +2,40 @@
 @model BovinoRemoto.App.Frontend.Pages.Acceso.MainOwnerModel
 @{
 }
+<ul class="nav nav-pills nav-fill">
+    
+    <li class="nav-">
+        <a class="nav-link active" asp-area="" asp-page="/Registro/NewBovine">Registrar vaca</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" asp-area="" asp-page="/Index">Cerrar sesión</a>
+    </li>
+    
+</ul>
+
+<div class="container text-center bg-dark bg-opacity-25">
+    <p style="font-size: x-large;">Página Principal Dueño</p>
+</div>
+
+<form>
+    <div class="form-group">
+
+        <label for="Id">Id</label>
+        <input class="form-control" style="width: 500px;" type="text" id="Id" placeholder="Numero de identificación">
+
+        <label for="nombres">Nombres</label>
+        <input class="form-control" type="text" id="nombres" placeholder="Nombres">
+
+        <label for="apellidos">Apellidos</label>
+        <input class="form-control" type="text" id="apellidos" placeholder="Apellidos">
+
+        <label for="direccion">Dirección</label>
+        <input class="form-control" type="text" id="direccion" placeholder="Dirección">
+
+        <label for="telefono">Teléfono</label>
+        <input class="form-control" type="text" id="telefono" placeholder="Numero telefónico">
+
+        <label for="correo">Email</label>
+        <input class="form-control" type="email" id="correo" placeholder="Dirección de correo electrónico">
+
+</form>

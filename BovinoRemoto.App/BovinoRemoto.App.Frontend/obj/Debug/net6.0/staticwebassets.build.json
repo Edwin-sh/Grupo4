@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DD/5F8jkQgEmhfwHZvAYz+QRRo5YVKqx0cjZPesEKJE=",
+  "Hash": "qmtlVXZ27Gylaq71U8zng/tBKwOgF7zq8ETKoegc8ew=",
   "Source": "BovinoRemoto.App.Frontend",
   "BasePath": "_content/BovinoRemoto.App.Frontend",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BovinoRemoto.App.Frontend.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\css\\Index.css",
+      "SourceId": "BovinoRemoto.App.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\",
+      "BasePath": "_content/BovinoRemoto.App.Frontend",
+      "RelativePath": "css/Index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Index.css"
+    },
+    {
       "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\css\\site.css",
       "SourceId": "BovinoRemoto.App.Frontend",
       "SourceType": "Discovered",
@@ -83,23 +100,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\Index.css",
-      "SourceId": "BovinoRemoto.App.Frontend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\",
-      "BasePath": "_content/BovinoRemoto.App.Frontend",
-      "RelativePath": "Index.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Index.css"
     },
     {
       "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\js\\site.js",
