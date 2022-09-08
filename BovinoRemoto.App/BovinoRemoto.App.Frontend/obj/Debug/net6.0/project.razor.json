@@ -16358,6 +16358,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Main\\MainOwner.cshtml",
+      "TargetPath": "Pages\\Main\\MainOwner.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Acceso\\LoginVeterinary.cshtml",
       "TargetPath": "Pages\\Acceso\\LoginVeterinary.cshtml",
       "FileKind": "mvc"
