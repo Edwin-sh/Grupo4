@@ -16323,8 +16323,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Listar\\ListByVeterynary.cshtml",
+      "TargetPath": "Pages\\Listar\\ListByVeterynary.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Shared\\_Layout.cshtml",
       "TargetPath": "Pages\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Listar\\ListByOwner.cshtml",
+      "TargetPath": "Pages\\Listar\\ListByOwner.cshtml",
       "FileKind": "mvc"
     },
     {

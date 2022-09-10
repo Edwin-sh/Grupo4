@@ -31,6 +31,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Listar/ListByOwner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFyXExpc3RCeU93bmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Listar/ListByVeterynary.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTGlzdGFyXExpc3RCeVZldGVyeW5hcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Main/MainOwner.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFpblxNYWluT3duZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
