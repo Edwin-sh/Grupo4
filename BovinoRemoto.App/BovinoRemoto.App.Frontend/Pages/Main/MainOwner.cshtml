@@ -2,20 +2,30 @@
 @model BovinoRemoto.App.Frontend.Pages.Acceso.MainOwnerModel
 @{
 }
-<ul class="nav nav-pills nav-fill">
-    
-    <li class="nav-">
-        <a class="nav-link active" asp-area="" asp-page="/Registro/NewBovine">Registrar vaca</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active" asp-area="" asp-page="/Index">Cerrar sesión</a>
-    </li>
-    
-</ul>
-
 <div class="container text-center bg-dark bg-opacity-25">
     <p style="font-size: x-large;">Página Principal Dueño</p>
 </div>
+
+<p></p>
+
+<ul class="nav nav-pills justify-content-end">
+
+    <li class="nav-item" style="margin: 10px;">
+        <a class="btn btn-success" asp-area="" asp-page="/Registro/NewBovine">Registrar bovino</a>
+    </li>
+    <li class="nav-item" style="margin: 10px;">
+        <a class="btn btn-success" asp-area="" asp-page="/Registro/NewBovine">Listar mis bovinos</a>
+    </li>
+
+    </li>
+
+    <li class="nav-item" style="margin: 10px; margin-left: 60px;">
+        <a class="btn btn-primary" asp-area="" asp-page="/Index">Cerrar sesión</a>
+    </li>
+
+</ul>
+
+<p></p>
 
 <form>
     <div class="form-group">
