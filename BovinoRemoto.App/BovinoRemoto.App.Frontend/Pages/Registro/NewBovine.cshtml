@@ -2,3 +2,28 @@
 @model BovinoRemoto.App.Frontend.Pages.Entidades.NewBovineModel
 @{
 }
+
+<div class="container text-center bg-dark bg-opacity-25">
+    <p style="font-size: x-large;">Ingresando un nuevo Bovino</p>
+</div>
+
+<form>
+    <div class="form-group">
+
+        <label for="nombre">Nombre</label>
+        <input class="form-control" type="text" id="nombre" placeholder="Nombres">
+
+        <label for="color">Color</label>
+        <input class="form-control" type="text" id="color" placeholder="Color">
+
+        <label for="especie">Especie</label>
+        <input class="form-control" type="text" id="especie" placeholder="Especie">
+
+        <label for="raza">Raza</label>
+        <input class="form-control" type="text" id="raza" placeholder="Raza">
+        <small class="form-text text-muted">*Opcional</small>
+        <p></p>
+
+        <button type="submit" class="btn btn-primary">Guardar</button>
+    </div>
+</form>
