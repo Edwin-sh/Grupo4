@@ -1,9 +1,8 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
-}
 
+}
 <link rel="stylesheet" href="~/css/Index.css" asp-append-version="true" />
 
 <div style="width: 1000px; border: 3px solid black; margin: 20px auto;">
@@ -15,10 +14,10 @@
                     <img class="card-img-top icono-menu"
                         src="https://th.bing.com/th/id/OIP.N4tNoMn8cm7zaNqY9kT8mAHaGy?pid=ImgDet&rs=1"
                         alt="Imagen Veterinarios">
-                    <div class="nav">                        
+                    <div class="nav">
                         <a class="nav-item btn btn-secondary boton-acceso" asp-area=""
-                            asp-page="/Registro/NewVeterinary">Registrarme</a>
-                        <a class="nav-item btn btn-secondary boton-acceso" asp-area="" asp-page="/Acceso/LoginVeterinary">Acceder</a>
+                            asp-page="/Veterinario/NuevoVeterinario">Registrarme</a>
+                        <a class="nav-item btn btn-secondary boton-acceso" asp-area="" asp-page="/Veterinario/AccederVeterinario">Acceder</a>
                     </div>
                 </div>
             </div>
@@ -33,8 +32,9 @@
                         alt="Imagen Dueños">
                     <div class="nav">
                         <a class="nav-item btn btn-secondary boton-acceso" asp-area=""
-                            asp-page="/Registro/NewOwner">Registrarme</a>
-                        <a class="nav-item btn btn-secondary boton-acceso" asp-area="" asp-page="/Acceso/LoginOwner">Acceder</a>
+                            asp-page="/Dueño/NuevoDueño">Registrarme</a>
+                        <a class="nav-item btn btn-secondary boton-acceso"  asp-area=""
+                            asp-page="/Dueño/AccederDueño">Acceder</a>
                     </div>
                 </div>
             </div>
