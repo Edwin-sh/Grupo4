@@ -8,73 +8,73 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BovinoRemoto.App.Frontend
 build_property.RootNamespace = BovinoRemoto.App.Frontend
-build_property.ProjectDir = c:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\
+build_property.ProjectDir = C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend
+build_property.MSBuildProjectDirectory = C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Bovino/ListarPorDueño.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Bovino/ListarPorDueño.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm92aW5vXExpc3RhclBvckR1ZcOxby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Bovino/ListarPorVeterinario.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Bovino/ListarPorVeterinario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm92aW5vXExpc3RhclBvclZldGVyaW5hcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Bovino/NuevoBovino.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Bovino/NuevoBovino.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm92aW5vXE51ZXZvQm92aW5vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Dueño/AccederDueño.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Dueño/AccederDueño.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRHVlw7FvXEFjY2VkZXJEdWXDsW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Dueño/NuevoDueño.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Dueño/NuevoDueño.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRHVlw7FvXE51ZXZvRHVlw7FvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Dueño/PrincipalDueño.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Dueño/PrincipalDueño.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRHVlw7FvXFByaW5jaXBhbER1ZcOxby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Error.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Index.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Privacy.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Veterinario/AccederVeterinario.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Veterinario/AccederVeterinario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW9cQWNjZWRlclZldGVyaW5hcmlvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Veterinario/NuevoVeterinario.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Veterinario/NuevoVeterinario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW9cTnVldm9WZXRlcmluYXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Veterinario/PrincipalVeterinario.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Veterinario/PrincipalVeterinario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW9cUHJpbmNpcGFsVmV0ZXJpbmFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/_ViewImports.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/_ViewStart.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Shared/_Layout.cshtml]
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-w9divomz9a
