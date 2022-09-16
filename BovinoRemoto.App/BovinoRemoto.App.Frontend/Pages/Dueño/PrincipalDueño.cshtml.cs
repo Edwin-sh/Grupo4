@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BovinoRemoto.App.Frontend.Pages.Acceso
+namespace BovinoRemoto.App.Frontend.Pages.Dueño
 {
-    public class MainVeterinaryModel : PageModel
+    public class PrincipalDueñoModel : PageModel
     {
         public void OnGet()
         {
