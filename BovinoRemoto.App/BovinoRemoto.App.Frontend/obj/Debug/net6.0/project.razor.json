@@ -16303,13 +16303,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Main\\MainOwner.cshtml",
-      "TargetPath": "Pages\\Main\\MainOwner.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Dueño\\AccederDueño.cshtml",
+      "TargetPath": "Pages\\Dueño\\AccederDueño.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Main\\MainVeterinary.cshtml",
-      "TargetPath": "Pages\\Main\\MainVeterinary.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Bovino\\ListarPorVeterinario.cshtml",
+      "TargetPath": "Pages\\Bovino\\ListarPorVeterinario.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16318,23 +16318,23 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Acceso\\LoginOwner.cshtml",
-      "TargetPath": "Pages\\Acceso\\LoginOwner.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Veterinario\\NuevoVeterinario.cshtml",
+      "TargetPath": "Pages\\Veterinario\\NuevoVeterinario.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Registro\\NewVeterinary.cshtml",
-      "TargetPath": "Pages\\Registro\\NewVeterinary.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Bovino\\ListarPorDueño.cshtml",
+      "TargetPath": "Pages\\Bovino\\ListarPorDueño.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Listar\\ListByOwner.cshtml",
-      "TargetPath": "Pages\\Listar\\ListByOwner.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Bovino\\NuevoBovino.cshtml",
+      "TargetPath": "Pages\\Bovino\\NuevoBovino.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Acceso\\LoginVeterinary.cshtml",
-      "TargetPath": "Pages\\Acceso\\LoginVeterinary.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Dueño\\NuevoDueño.cshtml",
+      "TargetPath": "Pages\\Dueño\\NuevoDueño.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16343,8 +16343,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Registro\\NewBovine.cshtml",
-      "TargetPath": "Pages\\Registro\\NewBovine.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Veterinario\\AccederVeterinario.cshtml",
+      "TargetPath": "Pages\\Veterinario\\AccederVeterinario.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16353,13 +16353,13 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Registro\\NewOwner.cshtml",
-      "TargetPath": "Pages\\Registro\\NewOwner.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Dueño\\PrincipalDueño.cshtml",
+      "TargetPath": "Pages\\Dueño\\PrincipalDueño.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Listar\\ListByVeterinary.cshtml",
-      "TargetPath": "Pages\\Listar\\ListByVeterinary.cshtml",
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Veterinario\\PrincipalVeterinario.cshtml",
+      "TargetPath": "Pages\\Veterinario\\PrincipalVeterinario.cshtml",
       "FileKind": "mvc"
     },
     {

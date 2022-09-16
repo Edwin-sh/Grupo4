@@ -1,20 +1,22 @@
 ﻿@page
-@model BovinoRemoto.App.Frontend.Pages.Entidades.NewOwnerModel
+@model BovinoRemoto.App.Frontend.Pages.Veterinario.NuevoVeterinarioModel
 @{
 }
 <div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Ingresando un nuevo Dueño</p>
+    <p style="font-size: x-large;">Ingresando un nuevo Veterinario</p>
 </div>
 
 <form>
     <div class="form-group">
+
         <label for="Id">Id</label>
-        <input class="form-control" style="width: 500px;" type="text" id="Id" placeholder="Numero de identificación">
+        <input class="form-control" style="width: 500px;" type="text" id="Id"
+            placeholder="Ingrese numero de identificación">
     </div>
 
     <div class="form-group">
         <label for="nombres">Nombres</label>
-        <input class=" form-control" type="text" id="nombres" placeholder="Nombres">
+        <input class="form-control" type="text" id="nombres" placeholder="Nombres">
     </div>
 
     <div class="form-group">
@@ -33,9 +35,8 @@
     </div>
 
     <div class="form-group">
-        <label for="correo">Email</label>
-        <input class="form-control" type="email" id="correo" placeholder="Dirección de correo electrónico">
-        <small id="emailHelp" class="form-text text-muted">No compartirémos su email con terceros</small>
+        <label for="tarjeta">Tarjeta</label>
+        <input class="form-control" type="text" id="tarjeta" placeholder="Tarjeta profesional">
     </div>
 
     <p></p>
