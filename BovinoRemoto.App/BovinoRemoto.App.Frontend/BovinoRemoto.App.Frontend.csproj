@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BovinoRemoto.App.Persistencia\BovinoRemoto.App.Persistencia.csproj" />
+    <ProjectReference Include="..\BovinoRemoto.App.Dominio\BovinoRemoto.App.Dominio.csproj" />
   </ItemGroup>
 
 </Project>
