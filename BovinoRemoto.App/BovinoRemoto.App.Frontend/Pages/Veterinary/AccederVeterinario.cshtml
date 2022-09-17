@@ -1,20 +1,19 @@
 ﻿@page
-@model BovinoRemoto.App.Frontend.Pages.Veterinario.AccederVeterinarioModel
+@model BovinoRemoto.App.Frontend.Pages.AccederVeterinarioModel
 @{
 }
-<div class="container text-center bg-dark bg-opacity-25">
+<<div class="container text-center bg-dark bg-opacity-25">
     <p style="font-size: x-large;">Iniciando sesión Veterinario</p>
-</div>
-
-<form>
-    <div class="form-group">
-
-        <label for="Id">Id</label>
-        <input class="form-control" style="width: 500px;" type="text" id="Id" placeholder="Numero de identificación">
     </div>
 
-    <p></p>
+    <form method="get" action="./PrincipalVeterinario">
+        <div class="form-group">
+            <label asp-for="Veterinario.Num_Identificacion">Num Identificacion</label>
+            <input asp-for="Veterinario.Num_Identificacion" name="N_Identificacion" class="form-control"
+                style="width: 500px;" type="text" placeholder="Numero de identificación">
+        </div>
 
-    <a class="nav-item btn btn-secondary" asp-area="" asp-page="./PrincipalVeterinario">Ingresar</a>
+        <p></p>
 
-</form>
+        <button type="submit" value="Ingresar" class="nav-item btn btn-primary">Ingresar</button>
+    </form>

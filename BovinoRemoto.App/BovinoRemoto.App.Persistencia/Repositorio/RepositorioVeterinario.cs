@@ -35,6 +35,11 @@ namespace BovinoRemoto.App.Persistencia
             return _appContext.Veterinarios.FirstOrDefault(v => v.Id == idveterinario);
         }
 
+        public Veterinario GetVeterinarioPorCedula(int Num_Identificacion)
+        {
+            return _appContext.Veterinarios.FirstOrDefault(v => v.Num_Identificacion == Num_Identificacion);
+        }
+
         public Veterinario UpdateVeterinario(Veterinario veterinario)
         {
             var VeterinarioEncontrado = _appContext.Veterinarios.FirstOrDefault(v => v.Id == veterinario.Id);

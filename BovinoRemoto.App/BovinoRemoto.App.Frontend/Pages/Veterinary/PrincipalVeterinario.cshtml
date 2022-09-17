@@ -1,62 +1,70 @@
 ﻿@page
-@model BovinoRemoto.App.Frontend.Pages.Veterinario.PrincipalVeterinarioModel
+@model BovinoRemoto.App.Frontend.Pages.PrincipalVeterinarioModel
 @{
 }
 <div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Página Principal Veterinario</p>
+    <p style="font-size: x-large;">Página Principal Dueño</p>
+
 </div>
 
-<p></p>
+@if (Model.Veterinario == null)
+{
+    <div class="container text-center">
+        <p class="text-danger" style="font-size: x-large;">No se encontró registro con ese numero de identificacion</p>
+        <a class="btn btn-warning" asp-area="" asp-page="../Index">Regresar</a>
 
-<ul class="nav nav-pills justify-content-end">
-
-    <li class="nav-item" style="margin: 10px;">
-        <a class="btn btn-success" asp-area="" asp-page="/Bovino/ListarPorVeterinario">Listar bovinos a cargo</a>
-    </li>
-
-    <li class="nav-item" style="margin: 10px; margin-left: 60px;">
-        <a class="btn btn-primary" asp-area="" asp-page="/Index">Cerrar sesión</a>
-    </li>
-
-</ul>
-
-<p></p>
-
-<form>
-    <div class="form-group">
-
-        <label for="Id">Id</label>
-        <input class="form-control" style="width: 500px;" type="text" id="Id"
-            placeholder="Ingrese numero de identificación">
     </div>
 
-    <div class="form-group">
-        <label for="nombres">Nombres</label>
-        <input class="form-control" type="text" id="nombres" placeholder="Nombres">
-    </div>
 
-    <div class="form-group">
-        <label for="apellidos">Apellidos</label>
-        <input class="form-control" type="text" id="apellidos" placeholder="Apellidos">
-    </div>
+}
+else
+{
+    <ul class="nav nav-pills justify-content-end">
 
-    <div class="form-group">
-        <label for="direccion">Dirección</label>
-        <input class="form-control" type="text" id="direccion" placeholder="Dirección">
-    </div>
+        <li class="nav-item" style="margin: 10px;">
+                    <a class="btn btn-primary" asp-area="" asp-page="../Bovino/ListarPorVeterinario" asp-route-iddueño=@Model.Veterinario.Id>Bovinos a Cargo</a>
+        </li>
 
-    <div class="form-group">
-        <label for="telefono">Teléfono</label>
-        <input class="form-control" type="text" id="telefono" placeholder="Numero telefónico">
-    </div>
+        <li class="nav-item" style="margin: 10px; margin-left: 60px;">
+            <a class="btn btn-primary" asp-page="/Index">Cerrar sesión</a>
+        </li>
 
-    <div class="form-group">
-        <label for="tarjeta">Tarjeta</label>
-        <input class="form-control" type="text" id="tarjeta" placeholder="Tarjeta profesional">
-    </div>
+        
 
-    <p></p>
+    </ul>
 
-    <button type="submit" class="btn btn-primary">Guardar</button>
+    <form>
+        <div class="form-group">
 
-</form>
+                <label asp-for=@Model.Veterinario.Num_Identificacion>Numero de Identificacion</label>
+                <input class="form-control" style="width: 500px;" value=@Model.Veterinario.Num_Identificacion readonly>
+        </div>
+
+        <div class="form-group">
+                <label asp-for=@Model.Veterinario.Nombres>Nombres</label>
+                <input class="form-control" placeholder="Nombres" asp-for=@Model.Veterinario.Nombres>
+        </div>
+
+        <div class="form-group">
+                <label asp-for=@Model.Veterinario.Apellidos>Apellidos</label>
+                <input class="form-control" asp-for=@Model.Veterinario.Apellidos placeholder="Apellidos">
+        </div>
+
+        <div class="form-group">
+                <label asp-for=@Model.Veterinario.Direccion>Dirección</label>
+                <input class="form-control" asp-for=@Model.Veterinario.Direccion placeholder="Dirección">
+        </div>
+
+        <div class="form-group">
+                <label asp-for=@Model.Veterinario.Telefono>Teléfono</label>
+                <input class="form-control" asp-for=@Model.Veterinario.Telefono placeholder="Numero telefónico">
+        </div>
+
+        <div class="form-group">
+                <label asp-for=@Model.Veterinario.TarjetaProfesional>Tarjeta</label>
+                <input class="form-control" asp-for=@Model.Veterinario.TarjetaProfesional placeholder="Tarjeta profesional">
+        </div>
+
+    </form>
+
+}
