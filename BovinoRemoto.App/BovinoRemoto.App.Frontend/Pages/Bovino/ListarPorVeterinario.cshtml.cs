@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BovinoRemoto.App.Frontend.Pages.Bovino
+namespace BovinoRemoto.App.Frontend.Pages
 {
     public class ListarPorVeterinarioModel : PageModel
     {
