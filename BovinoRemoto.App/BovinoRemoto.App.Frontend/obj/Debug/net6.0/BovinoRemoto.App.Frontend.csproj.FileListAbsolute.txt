@@ -39,7 +39,6 @@ C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\Microsoft.
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
@@ -50,13 +49,9 @@ C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\System.Win
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
 C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
