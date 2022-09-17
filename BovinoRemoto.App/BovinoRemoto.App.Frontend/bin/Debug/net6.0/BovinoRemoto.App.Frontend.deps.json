@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "BovinoRemoto.App.Frontend/1.0.0": {
         "dependencies": {
+          "BovinoRemoto.App.Dominio": "1.0.0",
           "BovinoRemoto.App.Persistencia": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.0"
         },
