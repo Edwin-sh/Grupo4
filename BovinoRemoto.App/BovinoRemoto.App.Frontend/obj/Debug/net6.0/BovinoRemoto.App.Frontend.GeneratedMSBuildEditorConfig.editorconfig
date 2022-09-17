@@ -15,6 +15,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Grupo4\BovinoRemoto.App\BovinoRemoto.App.Frontend
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Bovino/InfoBovino.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm92aW5vXEluZm9Cb3Zpbm8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Grupo4/BovinoRemoto.App/BovinoRemoto.App.Frontend/Pages/Bovino/ListarPorDueño.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm92aW5vXExpc3RhclBvckR1ZcOxby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
