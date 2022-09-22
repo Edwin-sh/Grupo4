@@ -4,6 +4,6 @@ namespace BovinoRemoto.App.Dominio
     {
         public int Id { get; set; }
         public DateTime FechaCreacion { get; set; }
-        public List<Visita> Visitas { get; set; }        
+        public List<Visita> Visitas { get; set; }
     }
 }
