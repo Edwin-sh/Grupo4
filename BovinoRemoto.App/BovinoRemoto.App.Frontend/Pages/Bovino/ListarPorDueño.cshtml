@@ -1,17 +1,19 @@
 ﻿@page
-@model BovinoRemoto.App.Frontend.Pages.Bovino.ListarPorDueñoModel
+@model BovinoRemoto.App.Frontend.Pages.ListarPorDueñoModel
 @{
 }
 <div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Listando bovinos en posesión</p>
+    <p style="font-size: x-large;">Administracion bovinos en posesión</p>
 </div>
 
 <p></p>
 
 <ul class="nav nav-pills justify-content-end">
-
     <li class="nav-item" style="margin: 10px;">
-        <a class="btn btn-secondary" asp-area="" asp-page="/Dueño/PrincipalDueño">Regresar</a>
+        <a class="btn btn-secondary" asp-route-iddueño=@Model.Dueño.Id asp-page="./NuevoBovino">Nuevo</a>
+    </li>
+    <li class="nav-item" style="margin: 10px;">
+        <a class="btn btn-secondary" asp-page="./PrincipalDueño">Regresar</a>
     </li>
 
 </ul>
@@ -20,14 +22,18 @@
 <p></p>
 
 <table class="table">
+    <th class="align-content-center" style="background-color:lightgreen;">INFO BOVINOS</th>
 
-    <tr class="text-center" style="background-color: rgb(205, 241, 136);">
-        <td>Info bovinos</td>
+    <tr><br></tr>
+    <tr><br></tr>
+    <tr>
+        <td>Nombre</td>
+        <td>Especie</td>
     </tr>
-    @foreach (var bovino in Model.AllBovinos)
+    @foreach (var bovino in Model.Bovinos)
     {
-        <tr>
-            <td>@bovino</td>
-        </tr>
+        <td>@bovino.Nombre</td>
+        <td>@bovino.Especie</td>
+        <td><a class="btn btn-info" asp-page="./InfoBovino" asp-route-idbovino=@bovino.Id>Detalles</a></td>
     }
 </table>

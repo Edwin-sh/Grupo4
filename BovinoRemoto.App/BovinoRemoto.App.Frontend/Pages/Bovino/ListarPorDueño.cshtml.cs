@@ -1,18 +1,28 @@
+using BovinoRemoto.App.Dominio;
+using BovinoRemoto.App.Persistencia;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace BovinoRemoto.App.Frontend.Pages.Bovino
+namespace BovinoRemoto.App.Frontend.Pages
 {
     public class ListarPorDueñoModel : PageModel
     {
-        private readonly string[] Bovinos = { "Bovino1", "Bovino2", "Bovino3" };
-        public List<String>? AllBovinos { get; set; }
+        private readonly IRepositorioDueño repositorioDueño;
+        private readonly IRepositorioBovino repositorioBovino;
 
-
-        public void OnGet()
+        public ListarPorDueñoModel()
         {
-            AllBovinos = new List<string>();
-            AllBovinos.AddRange(Bovinos);
+            this.repositorioDueño = new RepositorioDueño(new Persistencia.AppContext());
+            this.repositorioBovino = new RepositorioBovino(new Persistencia.AppContext());
+        }
+
+        public Dueño Dueño { get; set; }
+        public IEnumerable<Vaca> Bovinos { get; set; }
+
+        public void OnGet(int ?iddueño)
+        {
+            Dueño = repositorioDueño.GetDueño(iddueño.Value);
+            Bovinos = repositorioBovino.GetVacasPorDueño(iddueño.Value);
         }
 
     }

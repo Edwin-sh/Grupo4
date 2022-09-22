@@ -9,6 +9,7 @@ namespace BovinoRemoto.App.Persistencia
         void DeleteDueño(int iddueño);
         IEnumerable<Dueño> GetAllDueños();
         Dueño GetDueño(int iddueño);
+        Dueño GetDueño(Vaca bovino);
         Dueño GetDueñoPorCedula(int Num_Identificacion);
         Dueño UpdateDueño(Dueño dueño);
     }
