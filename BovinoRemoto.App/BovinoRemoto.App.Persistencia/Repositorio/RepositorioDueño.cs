@@ -37,6 +37,11 @@ namespace BovinoRemoto.App.Persistencia
             return _appContext.Dueños.FirstOrDefault(d => d.Id == iddueño);
         }
 
+        public Dueño GetDueño(Vaca bovino)
+        {
+            return _appContext.Dueños.FirstOrDefault(d => d.Bovinos.FirstOrDefault(v => v.Id == bovino.Id) != null);
+        }
+
         public Dueño GetDueñoPorCedula(int Num_Identificacion)
         {
             return _appContext.Dueños.FirstOrDefault(d => d.Num_Identificacion == Num_Identificacion);

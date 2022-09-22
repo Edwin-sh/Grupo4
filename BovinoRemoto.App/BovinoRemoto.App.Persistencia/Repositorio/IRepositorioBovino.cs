@@ -3,7 +3,7 @@ namespace BovinoRemoto.App.Persistencia
 {
     public interface IRepositorioBovino
     {
-        Vaca AddVaca(Vaca vaca);
+        Vaca AddVaca(Vaca bovino, int iddueño);
         void DeleteVaca(int idvaca);
         IEnumerable<Vaca> GetAllVacas();
         Vaca GetVaca(int idvaca);

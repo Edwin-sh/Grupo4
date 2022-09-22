@@ -19,10 +19,10 @@ namespace BovinoRemoto.App.Frontend.Pages
         public Dueño Dueño { get; set; }
         public IEnumerable<Vaca> Bovinos { get; set; }
 
-        public void OnGet(int iddueño)
+        public void OnGet(int ?iddueño)
         {
-            Dueño = repositorioDueño.GetDueño(iddueño);
-            Bovinos = repositorioBovino.GetVacasPorDueño(iddueño);
+            Dueño = repositorioDueño.GetDueño(iddueño.Value);
+            Bovinos = repositorioBovino.GetVacasPorDueño(iddueño.Value);
         }
 
     }
