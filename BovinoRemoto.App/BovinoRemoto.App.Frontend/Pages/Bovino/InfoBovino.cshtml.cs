@@ -12,14 +12,16 @@ namespace BovinoRemoto.App.Frontend.Pages
         public InfoBovinoModel()
         {
             this.repositorioBovino = new RepositorioBovino(new Persistencia.AppContext());
+            this.repositorioDueño = new RepositorioDueño(new Persistencia.AppContext());
         }
-
-
+        //[BindProperty]
         public Vaca Bovino { get; set; }
+        public Dueño Dueño { get; set; }
 
         public void OnGet(int idbovino)
         {
             Bovino = repositorioBovino.GetVaca(idbovino);
+            Dueño = repositorioDueño.GetDueño(Bovino);
         }
     }
 }

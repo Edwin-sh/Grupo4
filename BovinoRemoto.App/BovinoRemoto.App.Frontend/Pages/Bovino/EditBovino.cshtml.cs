@@ -5,31 +5,30 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace BovinoRemoto.App.Frontend.Pages
 {
-    public class NuevoBovinoModel : PageModel
+    public class EditBovinoModel : PageModel
     {
-        private readonly IRepositorioDueño repositorioDueño;
         private readonly IRepositorioBovino repositorioBovino;
-
-        public NuevoBovinoModel()
+        private readonly IRepositorioDueño repositorioDueño;
+        public EditBovinoModel()
         {
-            this.repositorioDueño = new RepositorioDueño(new Persistencia.AppContext());
             this.repositorioBovino = new RepositorioBovino(new Persistencia.AppContext());
+            this.repositorioDueño = new RepositorioDueño(new Persistencia.AppContext());
         }
         [BindProperty]
-        public Dueño Dueño { get; set; }
-        [BindProperty]
         public Vaca Bovino { get; set; }
+        [BindProperty]
+        public Dueño Dueño { get; set; }
 
-        public void OnGet(int iddueño)
+        public void OnGet(int idbovino)
         {
-            this.Dueño = repositorioDueño.GetDueño(iddueño);
+            Bovino = repositorioBovino.GetVaca(idbovino);
+            Dueño = repositorioDueño.GetDueño(Bovino);
         }
 
         public IActionResult OnPost()
         {
-            Console.WriteLine(Dueño.Id);
-            var BovinoAdicionado = repositorioBovino.AddVaca(Bovino, Dueño.Id);
-            if (BovinoAdicionado != null)
+            var bovinoEditado = repositorioBovino.UpdateVaca(Bovino);
+            if (bovinoEditado != null)
             {
                 return RedirectToPage("./ListarPorDueño", new { iddueño = Dueño.Id });
             }

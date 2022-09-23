@@ -11,26 +11,22 @@
 {
     <div class="container text-center">
         <p class="text-danger" style="font-size: x-large;">No se encontró registro con ese numero de identificacion</p>
-        <a class="btn btn-warning" asp-area="" asp-page="../Index">Regresar</a>
+        <p>@Model.Dueño.Id</p>
+        <a class="btn btn-warning" asp-area="" asp-page="../Index"><i class="fas fa-duotone fa-circle-left"> Regresar</a>
 
     </div>
-
-
 }
 else
 {
     <ul class="nav nav-pills justify-content-end">
 
         <li class="nav-item" style="margin: 10px;">
-                    <a class="btn btn-primary" asp-area="" asp-page="../Bovino/ListarPorDueño" asp-route-iddueño=@Model.Dueño.Id>Administración Bovinos</a>
+                    <a class="btn btn-warning" asp-page="../Bovino/ListarPorDueño" asp-route-iddueño=@Model.Dueño.Id><i class="fa-solid fa-folder-closed"></i> Administración Bovinos</a>
         </li>
 
-        <li class="nav-item" style="margin: 10px; margin-left: 60px;">
-            <a class="btn btn-primary" asp-page="/Index">Cerrar sesión</a>
+        <li class="nav-item" style="margin: 10px; margin-left: 20px;">
+            <a class="btn btn-danger" asp-page="../Index">Cerrar sesión <i class="fas fa-solid fa-right-to-bracket"></i></a>
         </li>
-
-        
-
     </ul>
 
     <form>
