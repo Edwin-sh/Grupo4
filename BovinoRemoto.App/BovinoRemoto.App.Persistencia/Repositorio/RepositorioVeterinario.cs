@@ -35,6 +35,11 @@ namespace BovinoRemoto.App.Persistencia
             return _appContext.Veterinarios.FirstOrDefault(v => v.Id == idveterinario);
         }
 
+        public Veterinario GetVeterinario(Vaca bovino)
+        {
+            return _appContext.Veterinarios.FirstOrDefault(vet => vet.BovinosaCargo.FirstOrDefault(v => v.Id == bovino.Id) != null);
+        }
+
         public Veterinario GetVeterinarioPorCedula(int Num_Identificacion)
         {
             return _appContext.Veterinarios.FirstOrDefault(v => v.Num_Identificacion == Num_Identificacion);
@@ -50,7 +55,7 @@ namespace BovinoRemoto.App.Persistencia
                 VeterinarioEncontrado.Direccion = veterinario.Direccion;
                 VeterinarioEncontrado.Telefono = veterinario.Telefono;
                 VeterinarioEncontrado.TarjetaProfesional = veterinario.TarjetaProfesional;
-
+                VeterinarioEncontrado.BovinosaCargo = veterinario.BovinosaCargo;
                 _appContext.SaveChanges();
             }
 

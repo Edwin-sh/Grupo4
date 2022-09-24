@@ -6,12 +6,14 @@ namespace BovinoRemoto.App.Persistencia
     public class RepositorioBovino : IRepositorioBovino
     {
         public readonly AppContext _appContext;
-        private readonly RepositorioDueño repositorioDueño;
+        private readonly IRepositorioDueño repositorioDueño;
+        private readonly IRepositorioVeterinario repositorioVeterinario;
 
         public RepositorioBovino(AppContext appContext)
         {
             _appContext = appContext;
             this.repositorioDueño = new RepositorioDueño(appContext);
+            this.repositorioVeterinario = new RepositorioVeterinario(appContext);
         }
         public Vaca AddVaca(Vaca bovino, int iddueño)
         {
@@ -42,11 +44,76 @@ namespace BovinoRemoto.App.Persistencia
             }
         }
 
+        public Vaca AsignarVeterinario(int idveterinario, Vaca bovino)
+        {
+            var VeterinarioEncontrado = repositorioVeterinario.GetVeterinario(idveterinario);
+            if (VeterinarioEncontrado != null)
+            {
+                var Bovinos = GetVacasPorVeterinario(VeterinarioEncontrado.Id);
+                if (Bovinos == null)
+                {
+                    VeterinarioEncontrado.BovinosaCargo = new List<Vaca>();
+                }
+                VeterinarioEncontrado.BovinosaCargo.Add(bovino);
+                var veterinarioEditado = repositorioVeterinario.UpdateVeterinario(VeterinarioEncontrado);
+                if (veterinarioEditado != null)
+                {
+                    var bovinoEncontrado = GetVaca(bovino.Id);
+                    bovinoEncontrado.veterinarioAsignado = true;
+                    return UpdateVaca(bovinoEncontrado);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         public void DeleteVaca(int idbovino)
         {
             var BovinoEncontrado = _appContext.Vacas.FirstOrDefault(v => v.Id == idbovino);
             _appContext.Vacas.Remove(BovinoEncontrado);
             _appContext.SaveChanges();
+        }
+
+        public Vaca EliminarVeterinario(int idveterinario, Vaca bovino)
+        {
+            var VeterinarioEncontrado = repositorioVeterinario.GetVeterinario(idveterinario);
+            if (VeterinarioEncontrado != null)
+            {
+                var Bovinos = GetVacasPorVeterinario(VeterinarioEncontrado.Id);
+                if (Bovinos == null)
+                {
+                    VeterinarioEncontrado.BovinosaCargo = new List<Vaca>();
+                }
+                var eliminado = VeterinarioEncontrado.BovinosaCargo.Remove(bovino);
+                if (eliminado)
+                {
+                    var veterinarioEditado = repositorioVeterinario.UpdateVeterinario(VeterinarioEncontrado);
+                    if (veterinarioEditado != null)
+                    {
+                        var bovinoEncontrado = GetVaca(bovino.Id);
+                        bovinoEncontrado.veterinarioAsignado = false;
+                        return UpdateVaca(bovinoEncontrado);
+                    }
+                    else
+                    {
+                        return null;
+                    }
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            else
+            {
+                return null;
+            }
         }
 
         public IEnumerable<Vaca> GetAllVacas()
@@ -65,6 +132,19 @@ namespace BovinoRemoto.App.Persistencia
                                      .Include(d => d.Bovinos)
                                      .FirstOrDefault();
             return dueño.Bovinos;
+        }
+
+        public IEnumerable<Vaca> GetVacasPorVeterinario(int idveterinario)
+        {
+            var veterinario = _appContext.Veterinarios.Where(v => v.Id == idveterinario)
+                                      .Include(v => v.BovinosaCargo)
+                                      .FirstOrDefault();
+            return veterinario.BovinosaCargo;
+        }
+
+        public IEnumerable<Vaca> GetVacasSinAsignar()
+        {
+            return _appContext.Vacas.Where(v => !v.veterinarioAsignado);
         }
 
         public Vaca UpdateVaca(Vaca bovino)
