@@ -2,50 +2,65 @@
 @model BovinoRemoto.App.Frontend.Pages.NuevoDueñoModel
 @{
 }
-<div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Ingresando un nuevo Dueño</p>
+<div class="text-center bg-dark bg-opacity-25">
+    <h1>Ingresando un nuevo Dueño</h1>
 </div>
 
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Dueño.Num_Identificacion" class="from-label">Numero identificación</label>
-        <input asp-for="Dueño.Num_Identificacion" class="form-control" style="width: 500px;" type="text" placeholder="Numero de identificación">
-        <span asp-validation-for="Dueño.Id" class="text-danger"></span>
-    </div>
+<div class="col-10 offset-1">
+    <form method="post">
+        <table class="table">
+            <br><br>
+            <tr>
+                <div>
+                    <td><label asp-for="D
+           ueño.Num_Identificacion" class="form-label">Numero identificación</label></td>
+                    <td><input asp-for="Dueño.Num_Identificacion" class="form-control" type="text"
+                            placeholder="Numero de identificación"></td>
+                    <td><span asp-validation-for="Dueño.Id" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Dueño.Nombres" class="form-label">Nombres</label></td>
+                    <td><input asp-for="Dueño.Nombres" class=" form-control" type="text" placeholder="Nombres"></td>
+                    <td><span asp-validation-for="Dueño.Nombres" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Dueño.Apellidos" class="form-label">Apellidos</label></td>
+                    <td><input asp-for="Dueño.Apellidos" class="form-control" type="text" placeholder="Apellidos"></td>
+                    <td><span asp-validation-for="Dueño.Apellidos" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Dueño.Direccion" class="form-label">Dirección</label></td>
+                    <td><input asp-for="Dueño.Direccion" class="form-control" type="text" placeholder="Dirección"></td>
+                    <td><span asp-validation-for="Dueño.Direccion" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Dueño.Telefono" class="form-label">Teléfono</label></td>
+                    <td><input asp-for="Dueño.Telefono" class="form-control" type="text"
+                            placeholder="Numero telefónico">
+                    </td>
+                    <td><span asp-validation-for="Dueño.Telefono" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Dueño.Correo" class="form-label">Email</label>
+                    </td>
+                    <td><input asp-for="Dueño.Correo" class="form-control" type="email"
+                            placeholder="Dirección de correo electrónico"></td>
+                    <td><span asp-validation-for="Dueño.Correo" class="text-danger"></span></td>
+                </div>
+            </tr>
+        </table>
 
-    <div class="form-group">
-        <label asp-for="Dueño.Nombres" class="from-label">Nombres</label>
-        <input asp-for="Dueño.Nombres" class=" form-control" type="text" placeholder="Nombres">
-        <span asp-validation-for="Dueño.Nombres" class="text-danger"></span>
-    </div>
+        <button type="submit" class="btn btn-warning"><i class="fa-solid fa-user-check"></i> Guardar</button>
 
-    <div class="form-group">
-        <label asp-for="Dueño.Apellidos" class="from-label">Apellidos</label>
-        <input asp-for="Dueño.Apellidos" class="form-control" type="text" placeholder="Apellidos">
-        <span asp-validation-for="Dueño.Apellidos" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Dueño.Direccion" class="from-label">Dirección</label>
-        <input asp-for="Dueño.Direccion" class="form-control" type="text" placeholder="Dirección">
-        <span asp-validation-for="Dueño.Direccion" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Dueño.Telefono" class="from-label">Teléfono</label>
-        <input asp-for="Dueño.Telefono" class="form-control" type="text" placeholder="Numero telefónico">
-        <span asp-validation-for="Dueño.Telefono" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Dueño.Correo" class="from-label">Email</label>
-        <input asp-for="Dueño.Correo" class="form-control" type="email" placeholder="Dirección de correo electrónico">
-        <small id="emailHelp" class="form-text text-muted">No compartirémos su email con terceros</small>
-        <span asp-validation-for="Dueño.Correo" class="text-danger"></span>
-    </div>
-
-    <p></p>
-
-    <button type="submit" class="btn btn-primary">Guardar</button>
-
-</form>
+    </form>
+</div>

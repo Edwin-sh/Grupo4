@@ -21,46 +21,64 @@ else
     <ul class="nav nav-pills justify-content-end">
 
         <li class="nav-item" style="margin: 10px;">
-                    <a class="btn btn-warning" asp-page="../Bovino/ListarPorDueño" asp-route-iddueño=@Model.Dueño.Id><i class="fa-solid fa-folder-closed"></i> Administración Bovinos</a>
+            <a class="btn btn-warning" asp-page="../Bovino/ListarPorDueño" asp-route-iddueño=@Model.Dueño.Id><i
+                class="fa-solid fa-folder-closed"></i> Administración Bovinos</a>
         </li>
 
         <li class="nav-item" style="margin: 10px; margin-left: 20px;">
             <a class="btn btn-danger" asp-page="../Index">Cerrar sesión <i class="fas fa-solid fa-right-to-bracket"></i></a>
         </li>
     </ul>
-
-    <form>
-        <div class="form-group">
-
-            <label asp-for=@Model.Dueño.Num_Identificacion>Numero de Identificacion</label>
-            <input class="form-control" style="width: 500px;" value=@Model.Dueño.Num_Identificacion readonly>
-        </div>
-
-        <div class="form-group">
-            <label asp-for=@Model.Dueño.Nombres>Nombres</label>
-            <input class="form-control" placeholder="Nombres" asp-for=@Model.Dueño.Nombres>
-        </div>
-
-        <div class="form-group">
-            <label asp-for=@Model.Dueño.Apellidos>Apellidos</label>
-            <input class="form-control" asp-for=@Model.Dueño.Apellidos placeholder="Apellidos">
-        </div>
-
-        <div class="form-group">
-            <label asp-for=@Model.Dueño.Direccion>Dirección</label>
-            <input class="form-control" asp-for=@Model.Dueño.Direccion placeholder="Dirección">
-        </div>
-
-        <div class="form-group">
-            <label asp-for=@Model.Dueño.Telefono>Teléfono</label>
-            <input class="form-control" asp-for=@Model.Dueño.Telefono placeholder="Numero telefónico">
-        </div>
-
-        <div class="form-group">
-            <label asp-for=@Model.Dueño.Correo>Email</label>
-            <input class="form-control" asp-for=@Model.Dueño.Correo placeholder="Correo Electronico">
-        </div>
-
-    </form>
-
+    <div class="col-8 offset-md-2">
+        <form method="post">
+            <table class="table">
+                <br><br>
+                <input class="form-control" asp-for=Dueño.Id type="hidden">
+                <tr>
+                    <div>
+                        <td><label class="form-label">Numero de Identificacion</label></td>
+                        <td><input class="form-control" asp-for=Dueño.Num_Identificacion readonly></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <td><label class="form-label" asp-for=Dueño.Nombres></label></td>
+                        <td><input class="form-control" placeholder="Nombres" asp-for=Dueño.Nombres></td>
+                        <td></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <td><label class="form-label" asp-for=Dueño.Apellidos></label></td>
+                        <td><input class="form-control" asp-for=Dueño.Apellidos placeholder="Apellidos"></td>
+                        <td></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <td><label class="form-label" asp-for=Dueño.Direccion></label></td>
+                        <td><input class="form-control" asp-for=Dueño.Direccion placeholder="Dirección"></td>
+                        <td></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <td><label class="form-label" asp-for=Dueño.Telefono></label></td>
+                        <td><input class="form-control" asp-for=Dueño.Telefono placeholder="Numero telefónico">
+                        </td>
+                        <td></td>
+                    </div>
+                </tr>
+                <tr>
+                    <div>
+                        <td><label class="form-label" asp-for=Dueño.Correo></label></td>
+                        <td><input class="form-control" asp-for=Dueño.Correo placeholder="Correo electrónico"></td>
+                        <td></td>
+                    </div>
+                </tr>
+            </table>
+            <br><br>
+            <button type="submit" class="btn btn-warning"><i class="fa-solid fa-user-check"></i> Guardar</button>
+        </form>
+    </div>
 }
