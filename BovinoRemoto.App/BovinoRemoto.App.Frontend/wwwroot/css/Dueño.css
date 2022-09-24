@@ -1,0 +1,13 @@
+h1 {
+  background-color: white;
+  opacity: 1;
+  height: auto;
+}
+
+tr{
+  background-color: white;
+  opacity: 1;
+}
+body{
+    background-image: url("../img/Dueño.jpg");  
+}

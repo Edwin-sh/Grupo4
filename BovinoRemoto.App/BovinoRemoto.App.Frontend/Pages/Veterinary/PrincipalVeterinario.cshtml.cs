@@ -17,7 +17,7 @@ namespace BovinoRemoto.App.Frontend.Pages
         public Veterinario Veterinario { set; get; }
         public IActionResult OnGet(int? numIdentificacion, int? idveterinario)
         {
-            if (numIdentificacion != null)
+            if (numIdentificacion!=null)
             {
                 Veterinario = repositorioVeterinario.GetVeterinarioPorCedula
             (numIdentificacion.Value);
@@ -41,7 +41,7 @@ namespace BovinoRemoto.App.Frontend.Pages
         {
             Veterinario.BovinosaCargo = repositorioVeterinario.GetVeterinario(Veterinario.Id).BovinosaCargo;
             repositorioVeterinario.UpdateVeterinario(Veterinario);
-            return RedirectToPage("./PrincipalVeterinario", new { idveterinario = Veterinario.Id });
+            return RedirectToPage("./PrincipalVeterinario", new { idveterinario = Veterinario.Id});
         }
     }
 }

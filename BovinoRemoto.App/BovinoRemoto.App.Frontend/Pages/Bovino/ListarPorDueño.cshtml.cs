@@ -40,7 +40,7 @@ namespace BovinoRemoto.App.Frontend.Pages
         public IActionResult OnPost()
         {
             repositorioBovino.DeleteVaca(Bovino.Id);
-            return RedirectToPage("./ListarPorDueño", new { iddueño = Dueño.Id });
+            return RedirectToPage("./ListarPorDueño", new { iddueño = Dueño.Id});
         }
     }
 }

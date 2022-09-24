@@ -18,7 +18,7 @@ namespace BovinoRemoto.App.Frontend.Pages
         public Dueño Dueño { set; get; }
         public IActionResult OnGet(int? numIdentificacion, int? iddueño)
         {
-            if (numIdentificacion != null)
+            if (numIdentificacion!=null)
             {
                 Dueño = repositorioDueño.GetDueñoPorCedula
             (numIdentificacion.Value);
@@ -42,7 +42,7 @@ namespace BovinoRemoto.App.Frontend.Pages
         {
             Dueño.Bovinos = repositorioDueño.GetDueño(Dueño.Id).Bovinos;
             repositorioDueño.UpdateDueño(Dueño);
-            return RedirectToPage("./PrincipalDueño", new { iddueño = Dueño.Id });
+            return RedirectToPage("./PrincipalDueño", new {iddueño=Dueño.Id});
         }
     }
 }

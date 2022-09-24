@@ -12,7 +12,7 @@ namespace BovinoRemoto.App.Frontend.Pages
 
         public ListarPorVeterinarioModel()
         {
-            this.repositorioVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
+            this.repositorioVeterinario = new RepositorioVeterinario (new Persistencia.AppContext());
             this.repositorioBovino = new RepositorioBovino(new Persistencia.AppContext());
         }
         [BindProperty]
@@ -41,7 +41,7 @@ namespace BovinoRemoto.App.Frontend.Pages
         {
             var BovinoEncontrado = repositorioBovino.GetVaca(Bovino.Id);
             repositorioBovino.EliminarVeterinario(Veterinario.Id, BovinoEncontrado);
-            return RedirectToPage("./ListarPorVeterinario", new { idveterinario = Veterinario.Id });
+            return RedirectToPage("./ListarPorVeterinario", new { idveterinario = Veterinario.Id});
         }
     }
 }

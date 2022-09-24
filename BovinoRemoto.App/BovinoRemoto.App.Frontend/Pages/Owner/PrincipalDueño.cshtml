@@ -2,9 +2,9 @@
 @model BovinoRemoto.App.Frontend.Pages.PrincipalDueñoModel
 @{
 }
-<div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Página Principal Dueño</p>
-
+<link rel="stylesheet" href="~/css/Dueño.css" asp-append-version="true" />
+<div class="text-center bg-dark bg-opacity-25">
+    <h1>Página Principal Dueño</h1>
 </div>
 
 @if (Model.Dueño == null)
@@ -38,6 +38,7 @@ else
                     <div>
                         <td><label class="form-label">Numero de Identificacion</label></td>
                         <td><input class="form-control" asp-for=Dueño.Num_Identificacion readonly></td>
+                        <td></td>
                     </div>
                 </tr>
                 <tr>
