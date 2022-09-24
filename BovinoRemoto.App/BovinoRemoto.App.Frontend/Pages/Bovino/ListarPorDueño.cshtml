@@ -10,30 +10,53 @@
 
 <ul class="nav nav-pills justify-content-end">
     <li class="nav-item" style="margin: 10px;">
-        <a class="btn btn-secondary" asp-route-iddueño=@Model.Dueño.Id asp-page="./NuevoBovino">Nuevo</a>
+        <a class="btn btn-success" asp-route-iddueño=@Model.Dueño.Id asp-page="./NuevoBovino"><i
+                class="fas fa-duotone fa-file-circle-plus"></i> Nuevo</a>
     </li>
     <li class="nav-item" style="margin: 10px;">
-        <a class="btn btn-secondary" asp-page="./PrincipalDueño">Regresar</a>
+        <a class="btn btn-danger" asp-page="../Owner/PrincipalDueño"
+            asp-route-numIdentificacion=@Model.Dueño.Num_Identificacion><i class="fas fa-duotone fa-circle-left"></i>
+            Regresar</a>
     </li>
 
 </ul>
 
-<p></p>
-<p></p>
+<h1></h1>
+<h1></h1>
 
-<table class="table">
-    <th class="align-content-center" style="background-color:lightgreen;">INFO BOVINOS</th>
+<table class="table col-5">
+    <br><br><b></b>
+    <h1 class="text-center" style="background-color:lightgreen;">INFO BOVINOS</h1>
 
-    <tr><br></tr>
-    <tr><br></tr>
+    <br><br>
     <tr>
-        <td>Nombre</td>
-        <td>Especie</td>
+        <td class="fw-bold">NOMBRE</td>
+        <td class="fw-bold">ESPECIE</td>
     </tr>
-    @foreach (var bovino in Model.Bovinos)
+    @if (Model.Bovinos != null)
     {
-        <td>@bovino.Nombre</td>
-        <td>@bovino.Especie</td>
-        <td><a class="btn btn-info" asp-page="./InfoBovino" asp-route-idbovino=@bovino.Id>Detalles</a></td>
+        @foreach (var bovino in Model.Bovinos)
+        {
+            <tr>
+                <td>@bovino.Nombre</td>
+                <td>@bovino.Especie</td>
+                <td>
+                    <a class="btn btn-info table-btn" asp-page="./InfoBovino" asp-route-idbovino=@bovino.Id><i
+                    class="fas fa-info-circle fa-lg"></i> Detalles</a>
+                </td>
+                <td>
+                    <div class="btn-group pl-5 pr-5" role="group" aria-label="Basic mixed styles example">
+                        <a class="btn btn-warning d-inline" asp-page="./EditBovino" asp-route-idbovino=@bovino.Id><i
+                        class="fas fa-edit"></i> Editar</a>
+                        <form method="post">
+                            <button class="btn btn-danger d-inline" type="submit"><i class="fas fa-trash-alt"></i>
+                                Eliminar</button>
+                            <input type="hidden" asp-for="Bovino.Id" value="@bovino.Id" style="width: 0px;">
+                            <input type="hidden" asp-for="Dueño.Id" style="max-width: 0px;">
+                        </form>
+                    </div>
+                </td>
+            </tr>
+        }
     }
 </table>

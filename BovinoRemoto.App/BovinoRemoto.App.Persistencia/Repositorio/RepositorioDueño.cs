@@ -57,7 +57,7 @@ namespace BovinoRemoto.App.Persistencia
                 DueñoEncontrado.Direccion = dueño.Direccion;
                 DueñoEncontrado.Telefono = dueño.Telefono;
                 DueñoEncontrado.Correo = dueño.Correo;
-
+                DueñoEncontrado.Bovinos = dueño.Bovinos;
                 _appContext.SaveChanges();
             }
 

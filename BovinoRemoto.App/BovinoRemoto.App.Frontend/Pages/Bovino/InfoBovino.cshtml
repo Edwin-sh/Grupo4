@@ -2,36 +2,56 @@
 @model BovinoRemoto.App.Frontend.Pages.InfoBovinoModel
 @{
 }
-<div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Ingresando un nuevo Bovino</p>
+<div class="container text-center bg-dark bg-opacity-25 fw-bold">
+    <p style="font-size: x-large;">Mostrando informacion bovino</p>
 </div>
-<p></p>
 
-<form>
-    
-    <div class="form-group">
-        <label asp-for=@Model.Bovino.Nombre>Nombre</label>
-        <input asp-for=@Model.Bovino.Nombre class="form-control" placeholder="Nombres">
-    </div>
+<form class="col-5 offset-1">
+    <table class="table">
+        <tr>
+            <div>
+                <td><label>Dueño</label></td>
+                <td><input class="form-control" value="@Model.Dueño.Nombres @Model.Dueño.Apellidos" readonly></td>
+            </div>
+        </tr>
+        <tr>
+            <div>
+                <td><label asp-for=Bovino.Nombre></label></td>
+                <td><input asp-for=Bovino.Nombre class="form-control" readonly></td>
+            </div>
+        </tr>
+        <br>
+        <tr>
+            <div>
+                <td><label asp-for=Bovino.Color></label></td>
+                <td><input asp-for=Bovino.Color class="form-control" readonly></td>
+            </div>
+        </tr>
+        <br>
+        <tr>
+            <div>
+                <td><label asp-for=Bovino.Especie></label></td>
+                <td><input asp-for=Bovino.Especie class="form-control" readonly></td>
+            </div>
+        </tr>
+        <br>
+        <tr>
+            <div>
+                <td><label asp-for=Bovino.Raza></label></td>
+                <td><input asp-for=Bovino.Raza class="form-control" readonly></td>
+            </div>
+        </tr>
+        <br>
+        <tr>
+            <div>
+                <td><label>Veterinario</label></td>
+                <td><input class="form-control" readonly></td>
+            </div>
+        </tr>
+    </table>
+    <br>
 
-    <div class="form-group">
-        <label asp-for=@Model.Bovino.Color>Color</label>
-        <input asp-for=@Model.Bovino.Color class="form-control" placeholder="Color">
-    </div>
-
-    <div class="form-group">
-        <label asp-for=@Model.Bovino.Especie>Especie</label>
-        <input asp-for=@Model.Bovino.Especie class="form-control" placeholder="Especie">
-    </div>
-
-    <div class="form-group">
-        <label asp-for=@Model.Bovino.Raza>Raza</label>
-        <input asp-for=@Model.Bovino.Raza class="form-control" placeholder="Raza">      
-
-    </div>
-
-    <p></p>
-
-    
+    <a class="btn btn-warning" asp-page="./ListarPorDueño" asp-route-idDueño=@Model.Dueño.Id><i
+            class="fa-solid fa-arrow-left"></i> Regresar</a>
 
 </form>

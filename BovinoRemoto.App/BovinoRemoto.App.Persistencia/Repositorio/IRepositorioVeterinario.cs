@@ -8,6 +8,7 @@ namespace BovinoRemoto.App.Persistencia
         void DeleteVeterinario(int idveterinario);
         IEnumerable<Veterinario> GetAllVeterinarios();
         Veterinario GetVeterinario(int idveterinario);
+        Veterinario GetVeterinario(Vaca bovino);
         Veterinario GetVeterinarioPorCedula(int Num_Identificacion);
         Veterinario UpdateVeterinario(Veterinario veterinario);
     }

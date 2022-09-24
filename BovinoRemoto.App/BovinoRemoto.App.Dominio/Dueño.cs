@@ -9,4 +9,3 @@ namespace BovinoRemoto.App.Dominio
         public List<Vaca> Bovinos { get; set; }
     }
 }
-
