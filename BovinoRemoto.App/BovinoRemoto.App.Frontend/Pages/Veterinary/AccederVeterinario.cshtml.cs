@@ -15,5 +15,21 @@ namespace BovinoRemoto.App.Frontend.Pages
         }
         [BindProperty]
         public Veterinario Veterinario { set; get; }
+        public void OnGet()
+        {
+
+        }
+        public IActionResult OnPost()
+        {
+            var dEncontrado = repositorioVeterinario.GetVeterinarioPorCedula(Veterinario.Num_Identificacion);
+            if (dEncontrado != null)
+            {
+                return RedirectToPage("./PrincipalVeterinario", new { numIdentificacion = Veterinario.Num_Identificacion });
+            }
+            else
+            {
+                return RedirectToPage("../NotFound");
+            }
+        }
     }
 }

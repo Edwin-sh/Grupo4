@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uUxBHM2bi6CW3MXjwy8OQxJiwmDCUIqvAoyGq2iVfKU=",
+  "Hash": "Sb7zpFpWQ5lmHToqM8QHvZ0035oEBszlB/76BnM5R2M=",
   "Source": "BovinoRemoto.App.Frontend",
   "BasePath": "_content/BovinoRemoto.App.Frontend",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\BovinoRemoto.App.Frontend.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\css\\Bovino.css",
+      "SourceId": "BovinoRemoto.App.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\",
+      "BasePath": "_content/BovinoRemoto.App.Frontend",
+      "RelativePath": "css/Bovino.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Bovino.css"
+    },
+    {
+      "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\css\\Dueño.css",
+      "SourceId": "BovinoRemoto.App.Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\",
+      "BasePath": "_content/BovinoRemoto.App.Frontend",
+      "RelativePath": "css/Dueño.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Dueño.css"
     },
     {
       "Identity": "C:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\wwwroot\\css\\Index.css",

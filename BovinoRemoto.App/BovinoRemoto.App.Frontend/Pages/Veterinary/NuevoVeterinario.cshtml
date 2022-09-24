@@ -2,50 +2,60 @@
 @model BovinoRemoto.App.Frontend.Pages.NuevoVeterinarioModel
 @{
 }
-<div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Ingresando un nuevo Veterinario</p>
+<div class="text-center bg-dark bg-opacity-25">
+    <h1>Ingresando un nuevo Veterinario</h1>
 </div>
 
-<form method="post">
-    <div class="form-group">
-        <label asp-for="Veterinario.Num_Identificacion" class="from-label">Numero identificación</label>
-        <input asp-for="Veterinario.Num_Identificacion" class="form-control" style="width: 500px;" type="text"
-            placeholder="Numero de identificación">
-        <span asp-validation-for="Veterinario.Num_Identificacion" class="text-danger"></span>
-    </div>
+<div class="col-10 offset-1">
+    <form method="post">
+        <table class="table">
+            <br><br>
+            <tr>
+                <div>
+                    <td><label asp-for="Veterinario.Num_Identificacion" class="form-label">Numero identificación</label></td>
+                    <td><input asp-for="Veterinario.Num_Identificacion" class="form-control" type="text"
+            placeholder="Numero de identificación"></td>
+                    <td><span asp-validation-for="Veterinario.Num_Identificacion" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Veterinario.Nombres" class="form-label">Nombres</label></td>
+                    <td><input asp-for="Veterinario.Nombres" class=" form-control" type="text" placeholder="Nombres"></td>
+                    <td><span asp-validation-for="Veterinario.Nombres" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Veterinario.Apellidos" class="form-label">Apellidos</label></td>
+                    <td><input asp-for="Veterinario.Apellidos" class="form-control" type="text" placeholder="Apellidos"></td>
+                    <td><span asp-validation-for="Veterinario.Apellidos" class="text-danger"></span></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Veterinario.Direccion" class="form-label">Dirección</label></td>
+                    <td><input asp-for="Veterinario.Direccion" class="form-control" type="text" placeholder="Dirección"></td>
+                    <td><span asp-validation-for="Veterinario.Direccion" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Veterinario.Telefono" class="from-label">Teléfono</label></td>
+                    <td><input asp-for="Veterinario.Telefono" class="form-control" type="text" placeholder="Numero telefónico"></td>
+                    <td><span asp-validation-for="Veterinario.Telefono" class="text-danger"></span></td>
+                </div>
+            </tr>
+            <tr>
+                <div>
+                    <td><label asp-for="Veterinario.TarjetaProfesional" class="from-label">Tarjeta</label></td>
+                    <td><input asp-for="Veterinario.TarjetaProfesional" class="form-control" type="text" placeholder="Tarjeta profesional"></td>
+                    <td><span asp-validation-for="Veterinario.TarjetaProfesional" class="text-danger"></span></td>
+                </div>
+            </tr>
+        </table>
 
-    <div class="form-group">
-        <label asp-for="Veterinario.Nombres" class="from-label">Nombres</label>
-        <input asp-for="Veterinario.Nombres" class=" form-control" type="text" placeholder="Nombres">
-        <span asp-validation-for="Veterinario.Nombres" class="text-danger"></span>
-    </div>
+        <button type="submit" class="btn btn-warning"><i class="fa-solid fa-user-check"></i> Guardar</button>
 
-    <div class="form-group">
-        <label asp-for="Veterinario.Apellidos" class="from-label">Apellidos</label>
-        <input asp-for="Veterinario.Apellidos" class="form-control" type="text" placeholder="Apellidos">
-        <span asp-validation-for="Veterinario.Apellidos" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Veterinario.Direccion" class="from-label">Dirección</label>
-        <input asp-for="Veterinario.Direccion" class="form-control" type="text" placeholder="Dirección">
-        <span asp-validation-for="Veterinario.Direccion" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Veterinario.Telefono" class="from-label">Teléfono</label>
-        <input asp-for="Veterinario.Telefono" class="form-control" type="text" placeholder="Numero telefónico">
-        <span asp-validation-for="Veterinario.Telefono" class="text-danger"></span>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Veterinario.TarjetaProfesional" class="from-label">Tarjeta</label>
-        <input asp-for="Veterinario.TarjetaProfesional" class="form-control" type="text" placeholder="Tarjeta profesional">
-        <span asp-validation-for="Veterinario.TarjetaProfesional" class="text-danger"></span>
-    </div>
-
-    <p></p>
-
-    <button type="submit" class="btn btn-primary">Guardar</button>
-
-</form>
+    </form>
+</div>

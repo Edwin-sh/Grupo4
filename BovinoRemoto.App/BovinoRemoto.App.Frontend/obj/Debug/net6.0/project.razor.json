@@ -16353,6 +16353,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Bovino\\AsignarBovino.cshtml",
+      "TargetPath": "Pages\\Bovino\\AsignarBovino.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Grupo4\\BovinoRemoto.App\\BovinoRemoto.App.Frontend\\Pages\\Veterinary\\NuevoVeterinario.cshtml",
       "TargetPath": "Pages\\Veterinary\\NuevoVeterinario.cshtml",
       "FileKind": "mvc"

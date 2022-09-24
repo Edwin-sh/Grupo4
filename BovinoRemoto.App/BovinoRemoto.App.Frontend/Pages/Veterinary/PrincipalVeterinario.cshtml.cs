@@ -13,11 +13,35 @@ namespace BovinoRemoto.App.Frontend.Pages
         {
             this.repositorioVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
         }
+        [BindProperty]
         public Veterinario Veterinario { set; get; }
-        public void OnGet()
+        public IActionResult OnGet(int? numIdentificacion, int? idveterinario)
         {
-            int N_Identificacion = int.Parse(Request.Query["N_Identificacion"]);
-            Veterinario = repositorioVeterinario.GetVeterinarioPorCedula(N_Identificacion);
+            if (numIdentificacion!=null)
+            {
+                Veterinario = repositorioVeterinario.GetVeterinarioPorCedula
+            (numIdentificacion.Value);
+                if (Veterinario != null)
+                {
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("../NotFound");
+                }
+            }
+            else
+            {
+                Veterinario = repositorioVeterinario.GetVeterinario(idveterinario.Value);
+                return Page();
+            }
+        }
+
+        public IActionResult OnPost()
+        {
+            Veterinario.BovinosaCargo = repositorioVeterinario.GetVeterinario(Veterinario.Id).BovinosaCargo;
+            repositorioVeterinario.UpdateVeterinario(Veterinario);
+            return RedirectToPage("./PrincipalVeterinario", new { idveterinario = Veterinario.Id});
         }
     }
 }

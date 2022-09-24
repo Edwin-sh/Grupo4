@@ -2,6 +2,7 @@
 @model BovinoRemoto.App.Frontend.Pages.EditBovinoModel
 @{
 }
+<link rel="stylesheet" href="~/css/Bovino.css" asp-append-version="true" />
 <div class="container text-center bg-dark bg-opacity-25 fw-bold">
     <h1 style="font-size: x-large;">Editando informacion bovino</h1>
 </div>
@@ -32,17 +33,17 @@
         <br>
         <tr>
             <div>
-                <td><label asp-for=Bovino.Especie></label></td>
-                <td><input asp-for=Bovino.Especie class="form-control" placeholder="Especie"></td>
-                <td><span asp-validation-for="Bovino.Especie" class="text-danger"></span></td>
+                <td><label asp-for=Bovino.Raza></label></td>
+                <td><input asp-for=Bovino.Raza class="form-control" placeholder="Raza"></td>
+                <td><span asp-validation-for="Bovino.Raza" class="text-danger"></span></td>
             </div>
         </tr>
         <br>
         <tr>
             <div>
-                <td><label asp-for=Bovino.Raza></label></td>
-                <td><input asp-for=Bovino.Raza class="form-control" placeholder="Raza"></td>
-                <td><span asp-validation-for="Bovino.Raza" class="text-danger"></span></td>
+                <td><label asp-for=Bovino.Especie></label></td>
+                <td><input asp-for=Bovino.Especie class="form-control" placeholder="Especie"></td>
+                <td><span asp-validation-for="Bovino.Especie" class="text-danger"></span></td>
             </div>
         </tr>
         <br>

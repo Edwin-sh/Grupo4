@@ -14,10 +14,35 @@ namespace BovinoRemoto.App.Frontend.Pages
         {
             this.repositorioDueño = new RepositorioDueño(new Persistencia.AppContext());
         }
+        [BindProperty]
         public Dueño Dueño { set; get; }
-        public void OnGet(int numIdentificacion)
+        public IActionResult OnGet(int? numIdentificacion, int? iddueño)
         {
-            Dueño = repositorioDueño.GetDueñoPorCedula(numIdentificacion);
+            if (numIdentificacion!=null)
+            {
+                Dueño = repositorioDueño.GetDueñoPorCedula
+            (numIdentificacion.Value);
+                if (Dueño != null)
+                {
+                    return Page();
+                }
+                else
+                {
+                    return RedirectToPage("../NotFound");
+                }
+            }
+            else
+            {
+                Dueño = repositorioDueño.GetDueño(iddueño.Value);
+                return Page();
+            }
+        }
+
+        public IActionResult OnPost()
+        {
+            Dueño.Bovinos = repositorioDueño.GetDueño(Dueño.Id).Bovinos;
+            repositorioDueño.UpdateDueño(Dueño);
+            return RedirectToPage("./PrincipalDueño", new {iddueño=Dueño.Id});
         }
     }
 }

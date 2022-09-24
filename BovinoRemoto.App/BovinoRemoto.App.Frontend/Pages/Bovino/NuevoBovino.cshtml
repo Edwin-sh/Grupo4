@@ -2,8 +2,9 @@
 @model BovinoRemoto.App.Frontend.Pages.NuevoBovinoModel
 @{
 }
+<link rel="stylesheet" href="~/css/Bovino.css" asp-append-version="true" />
 <div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Ingresando un nuevo Bovino</p>
+    <h1>Ingresando un nuevo Bovino</h1>
 </div>
 <p></p>
 
@@ -32,13 +33,13 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="Bovino.Especie"></label>
-        <input asp-for="Bovino.Especie" class="form-control" type="text" placeholder="Especie">
+        <label asp-for="Bovino.Raza"></label>
+        <input asp-for="Bovino.Raza" class="form-control" type="text" placeholder="Raza">
     </div>
 
     <div class="form-group">
-        <label asp-for="Bovino.Raza"></label>
-        <input asp-for="Bovino.Raza" class="form-control" type="text" placeholder="Raza">
+        <label asp-for="Bovino.Especie"></label>
+        <input asp-for="Bovino.Especie" class="form-control" type="text" placeholder="Especie">
         <small class="form-text text-muted">*Opcional</small>
 
     </div>

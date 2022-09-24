@@ -2,18 +2,23 @@
 @model BovinoRemoto.App.Frontend.Pages.AccederDueñoModel
 @{
 }
-<div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Iniciando sesión Dueño</p>
+<link rel="stylesheet" href="~/css/Dueño.css" asp-append-version="true" />
+<div class="text-center bg-dark bg-opacity-25">
+    <h1>Iniciando sesión Dueño</h1>
 </div>
 
-<form method="get" action="./PrincipalDueño">
-    <div class="form-group">
-        <label asp-for="Dueño.Num_Identificacion">Num Identificacion</label>
-        <input asp-for="Dueño.Num_Identificacion" name="N_Identificacion" class="form-control" style="width: 500px;" type="text"
-            placeholder="Numero de identificación">
-    </div>
-
-    <p></p>
-
-    <button type="submit" value="Ingresar" class="nav-item btn btn-primary">Ingresar</button>
-</form>
+<div class="col-6 offset-3">
+    <form method="post">
+        <table class="table">
+            <br><br>
+            <tr>
+                <td><label class="form-label">Num Identificacion</label></td>
+            </tr>
+            <tr>
+                <td><input asp-for="Dueño.Num_Identificacion" class="form-control" type="text" placeholder="Numero de Identificación"></td>
+            </tr>
+        </table>
+        <br>
+        <button type="submit" class="nav-item btn btn-success"><i class="fa-solid fa-user-lock"></i> Ingresar</button>
+    </form>
+</div>
