@@ -6,12 +6,19 @@
     <p style="font-size: x-large;">Mostrando informacion bovino</p>
 </div>
 
-<form class="col-5 offset-1">
+<form method="post" class="col-5 offset-1">
+
     <table class="table">
+        <tr>
+            <td><input type="hidden" asp-for=origen></td>
+            <td></td>
+            <td></td>
+        </tr>
         <tr>
             <div>
                 <td><label>Dueño</label></td>
                 <td><input class="form-control" value="@Model.Dueño.Nombres @Model.Dueño.Apellidos" readonly></td>
+                <td><input type="hidden" asp-for=Dueño.Id></td>
             </div>
         </tr>
         <tr>
@@ -27,7 +34,14 @@
                 <td><input asp-for=Bovino.Color class="form-control" readonly></td>
             </div>
         </tr>
+        <br>        
         <br>
+        <tr>
+            <div>
+                <td><label asp-for=Bovino.Raza></label></td>
+                <td><input asp-for=Bovino.Raza class="form-control" readonly></td>
+            </div>
+        </tr>
         <tr>
             <div>
                 <td><label asp-for=Bovino.Especie></label></td>
@@ -37,21 +51,14 @@
         <br>
         <tr>
             <div>
-                <td><label asp-for=Bovino.Raza></label></td>
-                <td><input asp-for=Bovino.Raza class="form-control" readonly></td>
-            </div>
-        </tr>
-        <br>
-        <tr>
-            <div>
                 <td><label>Veterinario</label></td>
-                <td><input class="form-control" readonly></td>
+                <td><input class="form-control" value="@Model.Veterinario.Nombres @Model.Veterinario.Apellidos" readonly></td>
+                <td><input type="hidden" asp-for=Veterinario.Id></td>
             </div>
         </tr>
     </table>
     <br>
 
-    <a class="btn btn-warning" asp-page="./ListarPorDueño" asp-route-idDueño=@Model.Dueño.Id><i
-            class="fa-solid fa-arrow-left"></i> Regresar</a>
+    <button class="btn btn-warning" type="submit"><i class="fa-solid fa-arrow-left"></i> Regresar</button>
 
 </form>

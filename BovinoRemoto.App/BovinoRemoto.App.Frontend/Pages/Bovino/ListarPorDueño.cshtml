@@ -2,11 +2,11 @@
 @model BovinoRemoto.App.Frontend.Pages.ListarPorDueñoModel
 @{
 }
-<div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Administracion bovinos en posesión</p>
+<div class="text-center bg-dark bg-opacity-25">
+    <h1>Administracion bovinos en posesión</h1>
 </div>
 
-<p></p>
+<br>
 
 <ul class="nav nav-pills justify-content-end">
     <li class="nav-item" style="margin: 10px;">
@@ -21,42 +21,45 @@
 
 </ul>
 
-<h1></h1>
-<h1></h1>
-
-<table class="table col-5">
-    <br><br><b></b>
-    <h1 class="text-center" style="background-color:lightgreen;">INFO BOVINOS</h1>
-
-    <br><br>
-    <tr>
-        <td class="fw-bold">NOMBRE</td>
-        <td class="fw-bold">ESPECIE</td>
-    </tr>
-    @if (Model.Bovinos != null)
-    {
-        @foreach (var bovino in Model.Bovinos)
-        {
-            <tr>
-                <td>@bovino.Nombre</td>
-                <td>@bovino.Especie</td>
-                <td>
-                    <a class="btn btn-info table-btn" asp-page="./InfoBovino" asp-route-idbovino=@bovino.Id><i
-                    class="fas fa-info-circle fa-lg"></i> Detalles</a>
-                </td>
-                <td>
-                    <div class="btn-group pl-5 pr-5" role="group" aria-label="Basic mixed styles example">
-                        <a class="btn btn-warning d-inline" asp-page="./EditBovino" asp-route-idbovino=@bovino.Id><i
-                        class="fas fa-edit"></i> Editar</a>
-                        <form method="post">
-                            <button class="btn btn-danger d-inline" type="submit"><i class="fas fa-trash-alt"></i>
-                                Eliminar</button>
-                            <input type="hidden" asp-for="Bovino.Id" value="@bovino.Id" style="width: 0px;">
-                            <input type="hidden" asp-for="Dueño.Id" style="max-width: 0px;">
-                        </form>
-                    </div>
-                </td>
-            </tr>
+<br><br><br>
+<form class="col-md-10 offset-md-1">
+    @if (Model.Bovinos != null && Model.Bovinos.Count()!=0)
+        {<table class="table">         
+        <tr>
+            <td class="fw-bold">NOMBRE</td>
+            <td class="fw-bold">RAZA</td>
+            <td style="max-width: 50px;"></td>
+            <td style="max-width: 50px;"></td>
+        </tr>
+        
+            @foreach (var bovino in Model.Bovinos)
+            {
+                <tr>
+                    <td>@bovino.Nombre</td>
+                    <td>@bovino.Raza</td>
+                    <td>
+                        <a class="btn btn-info table-btn" asp-page="./InfoBovino" asp-route-idbovino=@bovino.Id asp-route-origen="Dueño"><i
+                        class="fas fa-info-circle fa-lg"></i> Detalles</a>
+                    </td>
+                    <td>
+                        <div class="btn-group pl-5 pr-5" role="group" aria-label="Basic mixed styles example">
+                            <a class="btn btn-warning d-inline" asp-page="./EditBovino" asp-route-idbovino=@bovino.Id><i
+                            class="fas fa-edit"></i> Editar</a>
+                            <form method="post">
+                                <button class="btn btn-danger d-inline" type="submit"><i class="fas fa-trash-alt"></i>
+                                    Eliminar</button>
+                                <input type="hidden" asp-for="Bovino.Id" value="@bovino.Id" style="width: 0px;">
+                                <input type="hidden" asp-for="Dueño.Id" style="max-width: 0px;">
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }</table>
         }
-    }
-</table>
+        else
+        {
+            <br><br>
+            <h1 class="text-center" style="color: red;"><i class="fa-solid fa-circle-exclamation"></i> No tiene bovinos en posesión</h1>
+        }
+    
+</form>

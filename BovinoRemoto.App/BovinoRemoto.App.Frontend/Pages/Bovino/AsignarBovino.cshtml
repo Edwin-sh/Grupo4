@@ -1,0 +1,57 @@
+﻿@page
+@model BovinoRemoto.App.Frontend.Pages.AsignarBovinoModel
+@{
+}
+<div class="text-center bg-dark bg-opacity-25">
+    <h1>Bovinos disponibles</h1>
+</div>
+<ul class="nav nav-pills justify-content-end">
+    <li class="nav-item" style="margin: 10px;">
+        <a class="btn btn-danger" asp-page="./ListarPorVeterinario" asp-route-idveterinario=@Model.Veterinario.Id><i
+                class="fas fa-duotone fa-circle-left"></i> Regresar</a>
+    </li>
+</ul>
+<div class="col-md-10 offset-md-1">
+    @if (Model.Bovinos != null && Model.Bovinos.Count() != 0)
+    {
+        <table class="table">
+            <tr>
+                <td class="fw-bold">NOMBRE</td>
+                <td class="fw-bold">RAZA</td>
+                <td style="max-width: 50px;"></td>
+                <td style="max-width: 50px;"></td>
+            </tr>
+
+
+            @foreach (var bovino in Model.Bovinos)
+            {
+                <tr>
+                    <form method="post">
+                        <td>
+                            <input type="hidden" asp-for=Bovino.Id value="@bovino.Id">
+                            <input asp-for=Veterinario.Id type="hidden" class="form-control">
+                            @bovino.Nombre
+                        </td>
+                        <td>@bovino.Raza</td>
+                        <td><a class="btn btn-info table-btn" asp-page="./InfoBovino" asp-route-idbovino=@bovino.Id
+                        asp-route-idveterinario=@Model.Veterinario.Id asp-route-origen="Disponibles"><i
+                            class="fas fa-info-circle fa-lg"></i> Detalles</a>
+                        </td>
+                        <td>
+                            <div class="btn-group pl-5 pr-5" role="group" aria-label="Basic mixed styles example">
+                                <button class="btn btn-success d-inline" type="submit"><i class="fas fa-edit"></i>
+                                    Asignar</button>
+                            </div>
+                        </td>
+                    </form>
+                </tr>
+            }
+        </table>
+    }
+    else
+    {
+        <br><br>
+        <h1 class="text-center" style="color: red;"><i class="fa-solid fa-circle-exclamation"></i> No hay bovinos disponibles por asignar</h1>
+    }
+
+</div>

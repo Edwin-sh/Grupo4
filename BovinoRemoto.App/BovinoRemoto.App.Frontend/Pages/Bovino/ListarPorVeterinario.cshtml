@@ -2,28 +2,65 @@
 @model BovinoRemoto.App.Frontend.Pages.ListarPorVeterinarioModel
 @{
 }
-<div class="container text-center bg-dark bg-opacity-25">
-    <p style="font-size: x-large;">Listando bovinos a cargo</p>
+<div class="text-center bg-dark bg-opacity-25">
+    <h1>Administracion bovinos a cargo</h1>
 </div>
 
-<p></p>
+<br>
 
 <ul class="nav nav-pills justify-content-end">
-
     <li class="nav-item" style="margin: 10px;">
-        <a class="btn btn-secondary" asp-area="" asp-page="./Veterinario/PrincipalVeterinario">Regresar</a>
+        <input asp-for=Veterinario.Id type="hidden">
     </li>
-
+    <li class="nav-item" style="margin: 10px;">
+        <a class="btn btn-success" asp-route-idveterinario=@Model.Veterinario.Id asp-page="./AsignarBovino"><i
+                class="fas fa-duotone fa-file-circle-plus"></i> Asignar bovino</a>
+    </li>
+    <li class="nav-item" style="margin: 10px;">
+        <a class="btn btn-danger" asp-page="../Veterinary/PrincipalVeterinario"
+            asp-route-numIdentificacion=@Model.Veterinario.Num_Identificacion><i
+                class="fas fa-duotone fa-circle-left"></i>
+            Regresar</a>
+    </li>
 </ul>
 
-<p></p>
-<p></p>
-
-<table class="table">
-
-    <tr class="text-center" style="background-color: rgb(205, 241, 136);">
-        <td>Info bovinos</td>
-    </tr>
-
-
-</table>
+<form class="col-md-10 offset-md-1">
+    @if (Model.Bovinos != null && Model.Bovinos.Count()!=0)
+        {<table class="table">
+        <tr>
+            <td class="fw-bold">NOMBRE</td>
+            <td class="fw-bold">RAZA</td>
+            <td style="max-width: 50px;"></td>
+            <td style="max-width: 50px;"></td>
+        </tr>
+        
+            @foreach (var bovino in Model.Bovinos)
+            {
+                <tr>
+                    <td>@bovino.Nombre</td>
+                    <td>@bovino.Raza</td>
+                    <td>
+                        <a class="btn btn-info table-btn" asp-page="./InfoBovino" asp-route-idbovino=@bovino.Id asp-route-origen="Veterinario"><i
+                        class="fas fa-info-circle fa-lg"></i> Detalles</a>
+                    </td>
+                    <td>
+                        <div class="btn-group pl-5 pr-5" role="group" aria-label="Basic mixed styles example">
+                            <a class="btn btn-warning d-inline" asp-page="./EditBovino" asp-route-idbovino=@bovino.Id><i
+                            class="fas fa-edit"></i> Editar</a>
+                            <form method="post">
+                                <button class="btn btn-danger d-inline" type="submit"><i class="fas fa-trash-alt"></i>
+                                    Eliminar</button>
+                                <input type="hidden" asp-for="Bovino.Id" value="@bovino.Id" style="width: 0px;">
+                                <input type="hidden" asp-for="Veterinario.Id" style="max-width: 0px;">
+                            </form>
+                        </div>
+                    </td>
+                </tr>
+            }</table>
+        }
+        else
+        {
+                <br><br>
+                <h1 class="text-center" style="color: red;"><i class="fa-solid fa-circle-exclamation"></i> No tiene bovinos a cargo</h1>
+        }    
+</form>
