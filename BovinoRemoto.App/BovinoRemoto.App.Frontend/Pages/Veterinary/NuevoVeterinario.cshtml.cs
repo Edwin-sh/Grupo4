@@ -18,7 +18,6 @@ namespace BovinoRemoto.App.Frontend.Pages
 
         public void OnGet()
         {
-
         }
 
         public IActionResult OnPost()
